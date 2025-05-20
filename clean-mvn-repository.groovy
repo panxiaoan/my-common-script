@@ -1,6 +1,6 @@
 
-// 用途：清理本地 Maven 仓库中老的 Snapshot 包
-// 使用方法：在 Shell 中运行该文件：`groovy clean-mvn-old-snapshot.groovy` (前提条件是本地已经配置好 Groovy 的开发环境)
+// 用途：用于清理本地 Maven 仓库中过时的 SNAPSHOT 文件 和 `.lastUpdated` 文件
+// 使用方法：在 Shell 中运行该文件：`groovy clean-mvn-repository.groovy` (前提条件是本地已经配置好 Groovy 的开发环境)
 
 // Maven 仓库路径
 def m2repo = System.getProperty('user.home') + '/.m2/repository'

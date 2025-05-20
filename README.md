@@ -1,11 +1,15 @@
-# 工作中常用的一些 Groovy 脚本
+# 常用脚本
 
-## 配置 Groovy 开发环境
+## clean-mvn-repository.groovy
 
-1. 下载 Groovy SDK：https://groovy.apache.org/download.html
+用于清理本地 Maven 仓库中过时的 SNAPSHOT 文件 和 `.lastUpdated` 文件
+
+1. 配置 Groovy 开发环境
+
+- 下载 Groovy SDK：https://groovy.apache.org/download.html
 ![Groovy SDK bundle](asserts/download-groovy.png)
 
-2. 配置环境变量 (macOS)
+- 配置环境变量 (macOS)
 
 ```bash
  export GROOVY_HOME=$HOME/groovy-4.0.14
@@ -14,22 +18,23 @@
 
 生效环境变量 `source .bash_profile`
 
-3. 测试配置是否配置成功
+- 测试配置
 
 ```bash
-
-~ groovy -v
-
-Groovy Version: 4.0.14 JVM: 1.8.0_372 Vendor: Azul Systems, Inc. OS: Mac OS X
-
+groovy -v
 ```
 
-4. 运行一个本地 Maven 仓库中老的 Snapshot 文件
+- 开始清理
 
 ```bash
+groovy clean-mvn-repository.groovy
+```
 
-~ groovy clean-mvn-old-snapshot.groovy
+## gitpull.sh
 
->>> 删除成功, 总文件：28335, 删除文件：0, 保留文件：28335, time: 382 ms
+批量更新当前目录下的所有 git 项目
 
+在命令行运行脚本：
+```bash
+./gitpull.sh
 ```
