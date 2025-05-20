@@ -38,3 +38,15 @@ groovy clean-mvn-repository.groovy
 ```bash
 ./gitpull.sh
 ```
+
+## iTerm2Login.sh
+
+用于 macOS 中 iTerm Terminal 工具自动登录脚本
+
+使用方法：
+
+1. 将 `iTerm2Login.sh` 脚本文件放到 `/usr/local/bin` 目录
+2. 授权：`chmod a+x iTerm2Login.sh`
+3. 打开 iTerm 并设置： Settings → Profiles → General
+    - Command: Login Shell
+    - Send text at start: iTerm2Login.sh `port` `user` `ip` `password`
